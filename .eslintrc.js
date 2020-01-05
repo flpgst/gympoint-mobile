@@ -23,7 +23,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
+    'react-hooks'
   ],
   rules: {
     "prettier/prettier": "error",
@@ -44,4 +45,11 @@ module.exports = {
     "react/static-property-placement": "warn",
     "react-hooks/exhaustive-deps": "warn",
   },
+  settings: {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        rootPathSuffix: "src"
+      }
+    }
+  }
 };
